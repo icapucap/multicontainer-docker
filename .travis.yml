@@ -20,3 +20,17 @@ after_success:
     - docker push shidhu23/multi-nginx
     - docker push shidhu23/multi-server
     - docker push shidhu23/multi-worker
+
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: "us-east-1"
+    app: multi-docker
+    env: MultiDocker-env
+    bucket_name: elasticbeanstalk-us-east-1-152184266202
+    buket_path: docker-multi
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+        secure: $AWS_SECRET_KEY
