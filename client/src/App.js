@@ -11,10 +11,12 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
+            
+            <meta charset="utf-8"/>
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Fibonacci Calculator</h1>
-            <Link to="/">Home</Link>
-            <Link to="/otherpage">Other Page</Link>
+            <h1 className="App-title" >Fibonacci Calculator</h1>
+            <Link to="/" className='text-link'>Home</Link>
+            <Link to="/otherpage" className='text-link'>  Other Page</Link>
           </header>
           <div>
             <Route exact path="/" component={Fib} />

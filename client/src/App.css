@@ -21,6 +21,12 @@
   text-decoration: none;
 }
 
+.text-link {
+  color: aqua;
+  text-decoration: inherit;
+  font-family: 'Lobster', cursive;
+}
+
 .App-intro {
   font-size: large;
 }
